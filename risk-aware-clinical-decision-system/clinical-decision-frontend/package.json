@@ -1,0 +1,36 @@
+{
+  "name": "clinical-decision-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-Based Risk-Aware Clinical Decision Support System frontend",
+  "scripts": {
+    "start": "react-scripts start",
+    "start:8081": "set PORT=8081&& react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "echo \"Add your linter of choice\""
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "lucide-react": "^1.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "recharts": "^3.8.1"
+  },
+  "devDependencies": {
+    "react-scripts": "5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

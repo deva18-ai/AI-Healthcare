@@ -1,0 +1,232 @@
+.dashboard-root {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.welcome-text {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--secondary);
+  letter-spacing: -0.5px;
+}
+
+.subtitle-text {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Risk Assessment Section */
+.risk-assessment-section {
+  grid-column: span 8;
+}
+
+.risk-main-card {
+  height: 100%;
+}
+
+.risk-card-body {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.risk-details {
+  flex: 1;
+}
+
+.risk-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.risk-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.risk-indicator.high { 
+  background-color: var(--danger); 
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+.risk-indicator.medium {
+  background-color: var(--warning);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
+}
+
+.risk-indicator.stable { 
+  background-color: var(--success);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.risk-label {
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.risk-description {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+  grid-column: span 4;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-box {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.stat-box:hover {
+  transform: translateX(4px);
+  border-color: var(--primary);
+}
+
+.stat-icon {
+  padding: 12px;
+  border-radius: var(--radius-md);
+}
+
+.stat-icon.users { background-color: #eff6ff; color: #2563eb; }
+.stat-icon.alerts { background-color: #fff7ed; color: #ea580c; }
+.stat-icon.reports { background-color: #f0fdfa; color: #0d9488; }
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Analytics Section */
+.analytics-section {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.action-item:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+}
+
+.action-icon {
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  color: var(--primary);
+}
+
+.action-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-text span {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.action-text small {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.chevron {
+  color: var(--border);
+}
+
+.action-item:hover .chevron {
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .risk-assessment-section { grid-column: span 12; }
+  .stats-grid { 
+    grid-column: span 12; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+  }
+  .analytics-section { grid-template-columns: 1fr; }
+}
